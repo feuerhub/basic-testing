@@ -32,12 +32,12 @@ describe('simpleCalculator tests', () => {
   });
 
   test('should return null for invalid action', () => {
-    expect(simpleCalculator({ a: 2, b: 3, action: 'abc' })).toBe(null);
-    expect(simpleCalculator({ a: 2, b: 3, action: 22 })).toBe(null);
+    expect(simpleCalculator({ a: 2, b: 3, action: 'abc' })).toBeNull();
+    expect(simpleCalculator({ a: 2, b: 3, action: 22 })).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
-    expect(simpleCalculator({ a: 1, b: 'abc', action: Action.Add })).toBe(null);
-    expect(simpleCalculator({ a: 'abc', b: 2, action: Action.Add })).toBe(null);
+    expect(simpleCalculator({ a: 1, b: 'abc', action: Action.Add })).toBeNull();
+    expect(simpleCalculator({ a: 'abc', b: 2, action: Action.Add })).toBeNull();
   });
 });
